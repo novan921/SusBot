@@ -4,7 +4,7 @@ const fs = require('fs');
 const Discord = require('discord.js');
 
 // config file
-const { prefix, token } = require('./config.json');
+const { prefix } = require('./config.json');
 
 // create a new Discord client
 const client = new Discord.Client();
@@ -88,4 +88,4 @@ client.on('message', message => {
 });
 
 // login to Discord with your app's token
-client.login(token);
+client.login(process.env.TOKEN);
