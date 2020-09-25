@@ -61,7 +61,7 @@ async function checkVideos(youtubeChannelName, rssURL){
     // If there isn't any video in the youtube channel, return
     if(!lastVideo) return console.log("[ERR] | No video found for "+lastVideo);
     // If the date of the last uploaded video is older than the date of the bot starts, return 
-    if(new Date(lastVideo.pubDate).getTime() < startAt) return console.log(`[${youtubeChannelName}] | Last video was uploaded before the bot starts`);
+    if(new Date(lastVideo.pubDate).getTime <= startAt) return console.log(`[${youtubeChannelName}] | Last video was uploaded before the bot starts`);
     let lastSavedVideo = lastVideos[youtubeChannelName];
     // If the last video is the same as the last saved, return
     if(lastSavedVideo && (lastSavedVideo.id === lastVideo.id)) return console.log(`[${youtubeChannelName}] | Last video is the same as the last saved`);
@@ -117,7 +117,7 @@ async function check(){
         if(!channelInfos) return console.log("[ERR] | Invalid youtuber provided: "+youtuber);
         let video = await checkVideos(channelInfos.raw.snippet.title, "https://www.youtube.com/feeds/videos.xml?channel_id="+channelInfos.id);
         if(!video) return console.log(`[${channelInfos.raw.snippet.title}] | No notification`);
-        let channel = client.channels.get(config.channel);
+        let channel = client.channels.cache.get(config.channel);
         if(!channel) return console.log("[ERR] | Channel not found");
         channel.send(
             config.message
