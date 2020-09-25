@@ -1,3 +1,10 @@
 {
-    "prefix": "="
+    "message": "{videoURL}",
+    "channel": "728566289538482247",
+    "youtubers": [
+        "https://www.youtube.com/channel/UCyl1z3jo3XHR1riLFKG5UAg",
+        "https://www.youtube.com/channel/UC1DCedRgGHBdm81E1llLhOQ",
+        "https://www.youtube.com/channel/UChAnqc_AY5_I3Px5dig3X1Q"
+    ],
+    "youtubeKey": "AIzaSyCFCV4wIr13Bn9tbKCfWwVQYDQFrnHlRD4"
 }
