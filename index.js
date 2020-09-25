@@ -5,6 +5,9 @@ parser = new Parser(),
 Youtube = require("simple-youtube-api"),
 youtube = new Youtube(config.youtubeKey);
 
+//"message": "New video **{videoTitle}** by **{videoAuthorName}** uploaded at **{videoPubDate}**! Link: {videoURL}",
+
+
 const startAt = Date.now();
 const lastVideos = {};
 
