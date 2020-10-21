@@ -2,7 +2,7 @@ module.exports = {
     name: 'args',
     description: 'Arguments',
     args: true,
-    execute(message, args) {
+	execute(client, message, args) {
         
         if (args[0] === 'foo') {
             return message.channel.send('bar');

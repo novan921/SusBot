@@ -1,7 +1,7 @@
 module.exports = {
 	name: 'embed',
     description: 'Embed',
-	execute(message, args) {
+	execute(client, message, args) {
         const exampleEmbed = {
             color: 0x0099ff,
             title: 'Some title',

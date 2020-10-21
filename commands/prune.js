@@ -1,7 +1,7 @@
 module.exports = {
 	name: 'prune',
 	description: 'Prune messages in a channel',
-	execute(message, args) {
+	execute(client, message, args) {
 		const amount = parseInt(args[0]);
     
         if (isNaN(amount)) {

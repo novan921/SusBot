@@ -3,7 +3,7 @@ module.exports = {
     description: 'Role',
     args: true,
     usage: '<user> <role>',
-	execute(message, args) {
+	execute(client, message, args) {
 		
 	},
 };
